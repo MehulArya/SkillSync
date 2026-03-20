@@ -1,4 +1,4 @@
-# SkillSync
+# JobRix
 MUKUL RAJ<br>
 MEHUL<br>
 RAJVEER<br>
