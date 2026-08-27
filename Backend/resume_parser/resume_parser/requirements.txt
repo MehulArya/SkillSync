@@ -1,0 +1,2 @@
+pymupdf>=1.23
+spacy>=3.7
