@@ -35,3 +35,16 @@ focus on structure, hierarchy and user journeys.
 (initially...)
 Design Artifacts
 Sprint 1 :- design and prototype artifacts.
+
+## Sprint 1 Prototype
+
+The prototype1 directory contains the initial deployable web UI prototype for the JobRix Sprint 1 UI/UX work.
+
+### Included UI/UX areas
+- Job Seeker authentication and onboarding
+- Resume upload and ATS flow
+- Job discovery and job details
+- Application flow
+- AI interview and performance areas
+- Recruiter workflow structure
+- Role-based navigation and screen flow
