@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobRix - Career Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="brand">JobRix</div>
+
+  <nav>
+    <a href="#" onclick="showScreen('home')">Home</a>
+    <a href="#" onclick="showScreen('jobs')">Jobs</a>
+    <a href="#" onclick="showScreen('resume')">Resume</a>
+    <a href="#" onclick="showScreen('interview')">AI Interview</a>
+    <a href="#" onclick="showScreen('performance')">Performance</a>
+  </nav>
+
+  <div class="top-actions">
+    <button class="button secondary" onclick="showScreen('login')">Log in</button>
+    <button class="button" onclick="showScreen('register')">Get started</button>
+  </div>
+</header>
+
+<main>
+
+  <section id="home" class="screen active">
+    <div class="hero">
+      <div class="hero-content">
+        <span class="eyebrow">Career and hiring platform</span>
+
+        <h1>Find opportunities.<br>Prove your skills.</h1>
+
+        <p>
+          Build your profile, improve your resume, discover relevant jobs
+          and prepare for interviews with JobRix.
+        </p>
+
+        <div class="hero-actions">
+          <button class="button" onclick="showScreen('register')">
+            Start as Job Seeker
+          </button>
+
+          <button class="button secondary" onclick="showScreen('login')">
+            Recruiter Login
+          </button>
+        </div>
+      </div>
+
+      <div class="search-card">
+        <span class="eyebrow">Find your next opportunity</span>
+
+        <h2>Search jobs</h2>
+
+        <input
+          type="text"
+          placeholder="Role, skill or keyword"
+        >
+
+        <input
+          type="text"
+          placeholder="Location"
+        >
+
+        <button class="button full" onclick="showScreen('jobs')">
+          Search Jobs
+        </button>
+      </div>
+    </div>
+
+    <div class="feature-grid">
+      <div class="card">
+        <h3>Resume and ATS</h3>
+        <p>
+          Understand your resume strengths and identify areas that need improvement.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Personalized Jobs</h3>
+        <p>
+          Discover opportunities based on your profile, skills and preferences.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>AI Interviews</h3>
+        <p>
+          Practice interviews and review your performance.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="login" class="screen">
+    <div class="auth-card">
+      <span class="eyebrow">Welcome back</span>
+      <h2>Log in to JobRix</h2>
+
+      <label>Email address</label>
+      <input type="email" placeholder="you@example.com">
+
+      <label>Password</label>
+      <input type="password" placeholder="Password">
+
+      <button class="button full" onclick="showScreen('dashboard')">
+        Log in
+      </button>
+
+      <p>
+        Don't have an account?
+        <a href="#" onclick="showScreen('register')">Create one</a>
+      </p>
+    </div>
+  </section>
+
+
+  <section id="register" class="screen">
+    <div class="auth-card wide">
+      <span class="eyebrow">Job Seeker</span>
+      <h2>Create your profile</h2>
+
+      <div class="form-grid">
+        <div>
+          <label>Full name</label>
+          <input type="text" placeholder="Your name">
+        </div>
+
+        <div>
+          <label>Email address</label>
+          <input type="email" placeholder="you@example.com">
+        </div>
+
+        <div>
+          <label>Password</label>
+          <input type="password" placeholder="Create a password">
+        </div>
+
+        <div>
+          <label>Preferred role</label>
+          <input type="text" placeholder="Software Developer">
+        </div>
+
+        <div>
+          <label>Skills</label>
+          <input type="text" placeholder="Java, Python, SQL">
+        </div>
+
+        <div>
+          <label>Location</label>
+          <input type="text" placeholder="City or remote">
+        </div>
+      </div>
+
+      <button class="button" onclick="showScreen('resume')">
+        Create Profile
+      </button>
+    </div>
+  </section>
+
+
+  <section id="resume" class="screen">
+    <div class="content-card">
+      <span class="eyebrow">Onboarding</span>
+      <h2>Upload your resume</h2>
+
+      <p>
+        Upload your latest resume so JobRix can analyze it and identify
+        opportunities for improvement.
+      </p>
+
+      <div class="upload-box">
+        <div class="upload-icon">↑</div>
+        <h3>Drag and drop your resume</h3>
+        <p>or choose a file from your computer</p>
+
+        <input type="file" accept=".pdf,.doc,.docx">
+
+        <small>Supported formats: PDF, DOC, DOCX</small>
+      </div>
+
+      <button class="button" onclick="showScreen('ats')">
+        Continue to ATS Analysis
+      </button>
+    </div>
+  </section>
+
+
+  <section id="ats" class="screen">
+    <div class="content-card">
+      <span class="eyebrow">Resume Analysis</span>
+      <h2>ATS Analysis</h2>
+
+      <p>
+        Here's a quick overview of your current resume.
+      </p>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <strong>82</strong>
+          <span>ATS Score</span>
+        </div>
+
+        <div class="stat-card">
+          <strong>Good</strong>
+          <span>Resume Strength</span>
+        </div>
+
+        <div class="stat-card">
+          <strong>4</strong>
+          <span>Skill Gaps</span>
+        </div>
+      </div>
+
+      <div class="analysis-grid">
+        <div class="card">
+          <h3>Strengths</h3>
+          <p>Relevant skills and clear profile information.</p>
+        </div>
+
+        <div class="card">
+          <h3>Areas to improve</h3>
+          <p>Add relevant keywords and improve experience descriptions.</p>
+        </div>
+      </div>
+
+      <button class="button" onclick="showScreen('dashboard')">
+        Go to Dashboard
+      </button>
+    </div>
+  </section>
+
+
+  <section id="dashboard" class="screen">
+    <div class="dashboard">
+      <span class="eyebrow">Job Seeker</span>
+      <h2>Welcome back</h2>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <strong>82 / 100</strong>
+          <span>ATS Score</span>
+        </div>
+
+        <div class="stat-card">
+          <strong>3 / 5</strong>
+          <span>Interview Progress</span>
+        </div>
+
+        <div class="stat-card">
+          <strong>6</strong>
+          <span>Active Applications</span>
+        </div>
+
+        <div class="stat-card">
+          <strong>80%</strong>
+          <span>Profile Completion</span>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <h3>Recommended Jobs</h3>
+        <button class="button secondary" onclick="showScreen('jobs')">
+          View All
+        </button>
+      </div>
+
+      <div class="job-grid">
+        <div class="job-card">
+          <h3>Software Developer</h3>
+          <p>Company Name · Remote</p>
+          <span>Match indicator</span>
+          <button class="button" onclick="showScreen('details')">
+            View Details
+          </button>
+        </div>
+
+        <div class="job-card">
+          <h3>Backend Developer</h3>
+          <p>Company Name · Hybrid</p>
+          <span>Match indicator</span>
+          <button class="button" onclick="showScreen('details')">
+            View Details
+          </button>
+        </div>
+
+        <div class="job-card">
+          <h3>Data / AI Role</h3>
+          <p>Company Name · On-site</p>
+          <span>Match indicator</span>
+          <button class="button" onclick="showScreen('details')">
+            View Details
+          </button>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <h3>Quick Actions</h3>
+      </div>
+
+      <div class="feature-grid">
+        <div class="card action-card" onclick="showScreen('interview')">
+          <h3>AI Interview</h3>
+          <p>Practice for your next interview.</p>
+        </div>
+
+        <div class="card action-card" onclick="showScreen('performance')">
+          <h3>Performance</h3>
+          <p>Review your career progress.</p>
+        </div>
+
+        <div class="card action-card" onclick="showScreen('applications')">
+          <h3>Applications</h3>
+          <p>Track your submitted applications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="jobs" class="screen">
+    <div class="content-card large">
+      <span class="eyebrow">Explore</span>
+      <h2>Find your next job</h2>
+
+      <div class="search-row">
+        <input type="text" placeholder="Role, skill or keyword">
+        <input type="text" placeholder="Location">
+        <button class="button">Search</button>
+      </div>
+
+      <div class="filters">
+        <button class="filter">Work mode</button>
+        <button class="filter">Experience</button>
+        <button class="filter">Job type</button>
+        <button class="filter">Skills</button>
+      </div>
+
+      <div class="job-list">
+
+        <div class="job-card">
+          <h3>Software Developer</h3>
+          <p>Company Name · Remote</p>
+          <span>Match indicator</span>
+          <button class="button" onclick="showScreen('details')">
+            View Details
+          </button>
+        </div>
+
+        <div class="job-card">
+          <h3>Backend Developer</h3>
+          <p>Company Name · Hybrid</p>
+          <span>Match indicator</span>
+          <button class="button" onclick="showScreen('details')">
+            View Details
+          </button>
+        </div>
+
+        <div class="job-card">
+          <h3>Frontend Developer</h3>
+          <p>Company Name · Remote</p>
+          <span>Match indicator</span>
+          <button class="button" onclick="showScreen('details')">
+            View Details
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="details" class="screen">
+    <div class="content-card large">
+      <span class="eyebrow">Job Details</span>
+
+      <h2>Software Developer</h2>
+      <p>Company Name · Location · Remote</p>
+
+      <div class="details-layout">
+
+        <div>
+          <h3>Job Description</h3>
+          <p>
+            This role involves building and maintaining software products
+            while working with a development team.
+          </p>
+
+          <h3>Responsibilities</h3>
+          <p>
+            Develop features, collaborate with the team and maintain
+            application quality.
+          </p>
+
+          <h3>Requirements and Skills</h3>
+          <p>
+            Relevant programming experience, problem solving skills and
+            knowledge of software development.
+          </p>
+        </div>
+
+        <aside class="side-card">
+          <h3>Match / Fit</h3>
+          <p>Your profile matches several requirements.</p>
+
+          <button class="button full" onclick="showScreen('application')">
+            Apply for this Job
+          </button>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="application" class="screen">
+    <div class="content-card">
+      <span class="eyebrow">Application</span>
+      <h2>Review your application</h2>
+
+      <div class="review-item">
+        <strong>Profile</strong>
+        <span>Complete</span>
+      </div>
+
+      <div class="review-item">
+        <strong>Resume</strong>
+        <span>resume.pdf</span>
+      </div>
+
+      <div class="review-item">
+        <strong>ATS Score</strong>
+        <span>82 / 100</span>
+      </div>
+
+      <button class="button full" onclick="showScreen('status')">
+        Submit Application
+      </button>
+    </div>
+  </section>
+
+
+  <section id="status" class="screen">
+    <div class="content-card center">
+      <div class="success-icon">✓</div>
+
+      <span class="eyebrow">Application</span>
+      <h2>Application submitted</h2>
+
+      <p>
+        Your application for Software Developer has been submitted successfully.
+      </p>
+
+      <div class="status-box">
+        <strong>Status: Applied</strong>
+      </div>
+
+      <button class="button" onclick="showScreen('applications')">
+        View My Applications
+      </button>
+    </div>
+  </section>
+
+
+  <section id="applications" class="screen">
+    <div class="content-card large">
+      <span class="eyebrow">Applications</span>
+      <h2>My Applications</h2>
+
+      <div class="application-row">
+        <div>
+          <h3>Software Developer</h3>
+          <p>Company Name</p>
+        </div>
+        <strong>Applied</strong>
+      </div>
+
+      <div class="application-row">
+        <div>
+          <h3>Backend Developer</h3>
+          <p>Company Name</p>
+        </div>
+        <strong>Under Review</strong>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="interview" class="screen">
+    <div class="content-card">
+      <span class="eyebrow">AI Interview</span>
+      <h2>Interview Setup</h2>
+
+      <p>
+        Prepare for your target role with a guided interview session.
+      </p>
+
+      <label>Target role</label>
+      <input value="Software Developer">
+
+      <label>Interview focus</label>
+      <select>
+        <option>General Interview</option>
+        <option>Technical</option>
+        <option>Behavioral</option>
+      </select>
+
+      <label>Difficulty</label>
+      <select>
+        <option>Standard</option>
+        <option>Advanced</option>
+      </select>
+
+      <div class="check">
+        ✓ Profile and resume available
+      </div>
+
+      <div class="check">
+        ✓ Camera and microphone check
+      </div>
+
+      <button class="button full" onclick="showScreen('result')">
+        Start AI Interview
+      </button>
+    </div>
+  </section>
+
+
+  <section id="result" class="screen">
+    <div class="content-card">
+      <span class="eyebrow">Interview Result</span>
+      <h2>Interview Feedback</h2>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <strong>Good</strong>
+          <span>Overall Performance</span>
+        </div>
+
+        <div class="stat-card">
+          <strong>Strong</strong>
+          <span>Communication</span>
+        </div>
+
+        <div class="stat-card">
+          <strong>Improve</strong>
+          <span>Technical Depth</span>
+        </div>
+      </div>
+
+      <h3>Recommended Next Steps</h3>
+
+      <p>
+        Review your improvement areas and practice again to strengthen
+        your interview performance.
+      </p>
+
+      <button class="button" onclick="showScreen('performance')">
+        View Performance
+      </button>
+    </div>
+  </section>
+
+
+  <section id="performance" class="screen">
+    <div class="content-card">
+      <span class="eyebrow">Performance</span>
+      <h2>Your Progress</h2>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <strong>82</strong>
+          <span>Resume Score</span>
+        </div>
+
+        <div class="stat-card">
+          <strong>3</strong>
+          <span>Interviews Completed</span>
+        </div>
+
+        <div class="stat-card">
+          <strong>6</strong>
+          <span>Applications</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Focus Areas</h3>
+        <p>Improve technical depth and continue practicing interviews.</p>
+      </div>
+
+      <button class="button" onclick="showScreen('dashboard')">
+        Back to Dashboard
+      </button>
+    </div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+
+</body>
+</html>
