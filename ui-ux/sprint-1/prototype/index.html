@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobRix - Career Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="brand">JobRix</div>
+
+  <nav>
+    <a href="#" onclick="showScreen('home')">Home</a>
+    <a href="#" onclick="showScreen('jobs')">Jobs</a>
+    <a href="#" onclick="showScreen('resume')">Resume</a>
+    <a href="#" onclick="showScreen('interview')">AI Interview</a>
+    <a href="#" onclick="showScreen('performance')">Performance</a>
+  </nav>
+
+  <div class="top-actions">
+    <button class="button secondary" onclick="showScreen('login')">Log in</button>
+    <button class="button" onclick="showScreen('register')">Get started</button>
+  </div>
+</header>
+
+<main>
+
+<section id="home" class="screen active">
+  <div class="hero">
+    <div class="hero-content">
+      <span class="eyebrow">Career and hiring platform</span>
+      <h1>Find opportunities.<br>Prove your skills.</h1>
+      <p>
+        Build your profile, improve your resume, discover relevant jobs
+        and prepare for interviews with JobRix.
+      </p>
+
+      <div class="hero-actions">
+        <button class="button" onclick="showScreen('register')">
+          Start as Job Seeker
+        </button>
+
+        <button class="button secondary" onclick="showScreen('login')">
+          Recruiter Login
+        </button>
+      </div>
+    </div>
+
+    <div class="search-card">
+      <span class="eyebrow">Find your next opportunity</span>
+      <h2>Search jobs</h2>
+
+      <input type="text" placeholder="Role, skill or keyword">
+      <input type="text" placeholder="Location">
+
+      <button class="button full" onclick="showScreen('jobs')">
+        Search Jobs
+      </button>
+    </div>
+  </div>
+
+  <div class="feature-grid">
+    <div class="card">
+      <h3>Resume and ATS</h3>
+      <p>Understand your resume strengths and identify areas that need improvement.</p>
+    </div>
+
+    <div class="card">
+      <h3>Job Discovery</h3>
+      <p>Discover relevant opportunities based on your skills and profile.</p>
+    </div>
+
+    <div class="card">
+      <h3>AI Interview</h3>
+      <p>Prepare for interviews and improve your performance.</p>
+    </div>
+  </div>
+</section>
+
+<section id="login" class="screen">
+  <div class="auth-card">
+    <span class="eyebrow">Account</span>
+    <h2>Log in</h2>
+
+    <label>Email</label>
+    <input type="email" placeholder="Enter your email">
+
+    <label>Password</label>
+    <input type="password" placeholder="Enter your password">
+
+    <button class="button full" onclick="showScreen('home')">Log in</button>
+  </div>
+</section>
+
+<section id="register" class="screen">
+  <div class="auth-card">
+    <span class="eyebrow">Get started</span>
+    <h2>Create your account</h2>
+
+    <label>Name</label>
+    <input type="text" placeholder="Your name">
+
+    <label>Email</label>
+    <input type="email" placeholder="Your email">
+
+    <label>Password</label>
+    <input type="password" placeholder="Create a password">
+
+    <button class="button full" onclick="showScreen('resume')">
+      Create account
+    </button>
+  </div>
+</section>
+
+<section id="resume" class="screen">
+  <div class="content-card">
+    <span class="eyebrow">Job Seeker</span>
+    <h2>Resume & ATS</h2>
+
+    <div class="upload-box">
+      <div class="upload-icon">?</div>
+      <h3>Upload your resume</h3>
+      <p>Upload your resume to analyse it and improve your ATS readiness.</p>
+      <input type="file">
+    </div>
+
+    <button class="button" onclick="showScreen('jobs')">
+      Continue to Jobs
+    </button>
+  </div>
+</section>
+
+<section id="jobs" class="screen">
+  <div class="content-card large">
+    <span class="eyebrow">Opportunities</span>
+    <h2>Find Jobs</h2>
+
+    <div class="search-row">
+      <input type="text" placeholder="Role or skill">
+      <input type="text" placeholder="Location">
+      <button class="button">Search</button>
+    </div>
+
+    <div class="job-list">
+      <div class="job-card">
+        <div>
+          <h3>Software Developer</h3>
+          <p>Technology Company � Full Time</p>
+          <span>Remote � Entry Level</span>
+        </div>
+        <button class="button" onclick="showScreen('application')">
+          Apply
+        </button>
+      </div>
+
+      <div class="job-card">
+        <div>
+          <h3>Frontend Developer</h3>
+          <p>Product Company � Full Time</p>
+          <span>Hybrid � 1-2 Years</span>
+        </div>
+        <button class="button" onclick="showScreen('application')">
+          Apply
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="application" class="screen">
+  <div class="auth-card">
+    <span class="eyebrow">Application</span>
+    <h2>Apply for this job</h2>
+
+    <label>Full Name</label>
+    <input type="text" placeholder="Your name">
+
+    <label>Email</label>
+    <input type="email" placeholder="Your email">
+
+    <label>Resume</label>
+    <input type="file">
+
+    <button class="button full" onclick="showScreen('success')">
+      Submit Application
+    </button>
+  </div>
+</section>
+
+<section id="success" class="screen">
+  <div class="content-card center">
+    <div class="success-icon">?</div>
+    <h2>Application Submitted</h2>
+    <p>Your application has been submitted successfully.</p>
+
+    <button class="button" onclick="showScreen('home')">
+      Back to Home
+    </button>
+  </div>
+</section>
+
+<section id="interview" class="screen">
+  <div class="content-card">
+    <span class="eyebrow">Preparation</span>
+    <h2>AI Interview</h2>
+    <p>Practice interview questions and evaluate your responses.</p>
+
+    <button class="button">Start Interview</button>
+  </div>
+</section>
+
+<section id="performance" class="screen">
+  <div class="content-card large">
+    <span class="eyebrow">Your progress</span>
+    <h2>Performance</h2>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <strong>82%</strong>
+        <span>Resume Score</span>
+      </div>
+
+      <div class="stat-card">
+        <strong>76%</strong>
+        <span>Interview Score</span>
+      </div>
+
+      <div class="stat-card">
+        <strong>12</strong>
+        <span>Applications</span>
+      </div>
+
+      <div class="stat-card">
+        <strong>5</strong>
+        <span>Interviews</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
